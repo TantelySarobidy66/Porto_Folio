@@ -148,7 +148,7 @@ function Contacte() {
         e.preventDefault();
         const email = document.getElementById('champ').value;
         const message = document.getElementById('champ1').value;
-        axios.post('http://localhost:8081/mail', { email, message})
+        axios.post('https://backfolio-wdud.onrender.com/mail', { email, message})
         .then(res => {
             console.log(res.data);
             toast.success("Message envoyer avec succés")
