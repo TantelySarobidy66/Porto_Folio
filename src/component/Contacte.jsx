@@ -153,6 +153,12 @@ function Contacte() {
             console.log(res.data);
             toast.success("Message envoyer avec succés")
         }).catch(er => console.log(er));
+        if(email!="" && message!=""){
+            toast.success("Message envoyer avec succés")
+        }
+        else{
+            toast.success("Veuillez Remplir tous les champs")
+        }
     }
 
     return (
