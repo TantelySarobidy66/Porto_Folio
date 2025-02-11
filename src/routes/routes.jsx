@@ -2,6 +2,7 @@ import {BrowserRouter , Routes , Route} from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Login from '../interface/login';
+import Load from '../interface/Load';
 
 function Rout() {
     return (
@@ -9,7 +10,8 @@ function Rout() {
         <ToastContainer />
           <BrowserRouter>
             <Routes>
-                  <Route path="/" element={<Login/>}/>
+                  <Route path="/" element={<Load/>}/>
+                  <Route path="/Login" element={<Login/>}/>
             </Routes>
         </BrowserRouter>
         </div>

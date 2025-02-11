@@ -109,8 +109,9 @@ body {
     display: none;
 }
 
-#champ{
+#champ,#champ1{
     color: #fff;
+    border: 0.02px solid var(--manga);
 }
 
 #champ::placeholder{
@@ -119,6 +120,28 @@ body {
 
 #champ1::placeholder{
     color: #ffffffb0;
+}
+
+#h1{
+    background: var(--mainty);
+    -webkit-background-clip: text;
+    background-position: 0 20px;
+    color: transparent;
+    font-size: 560%;
+    -webkit-text-stroke: 0.5px var(--manga);
+}
+
+.vol2{
+    display: none;
+}
+.vol1{
+    display: block;
+}
+
+@media (max-width:850px){
+    #champ2{
+        display: none;
+    }
 }
 
 @media (max-width:830px){
@@ -315,5 +338,13 @@ body {
         width: 100%;
         left: 0;
         top: 412vh;
+    }
+
+    #blo{
+        display: block;
+    }
+
+    #comp0{
+        display: none;
     }
 }

@@ -5,8 +5,8 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { } from '@fortawesome/free-solid-svg-icons';
-// import $ from 'jquery'
-import { FaAngleLeft, FaCode, FaDatabase, FaDesktop, FaDiagnoses, FaMobile, FaPhotoVideo } from 'react-icons/fa'
+import $ from 'jquery'
+import { FaAngleLeft, FaArrowLeft, FaCode, FaDatabase, FaDesktop, FaDiagnoses, FaMobile, FaPhotoVideo } from 'react-icons/fa'
 import ScrollReveal from 'scrollreveal';
 
 function Competence() {
@@ -143,6 +143,33 @@ function Competence() {
         arrows: false,
     }
 
+
+    const settings3 = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        // arrows: false,
+    }
+
+    function Voir(){
+        $('#comp0').animate({left:"1vw"},1000);
+        $('#comp1').animate({left:"-150%"},500);
+    }
+      function deta(){
+        $('#comp0').animate({left:"1vw"},1000);
+        $('#comp1').animate({left:"-150%"},500);
+    }
+    function fe(){
+        $('#comp0').animate({left:"-150%"},500);
+        $('#comp1').animate({left:"1vw"},1000);
+    }
+
+
+
     return (
         <>
             <div>
@@ -151,6 +178,12 @@ function Competence() {
                 <img className='absolute w-[4vw] left-[77vw] top-[112vh] sar' src="sary/Ellipse 31.png" alt="" />
                 <img className='absolute w-[4vw] left-[25vw] top-[182vh] sar' src="sary/Ellipse 31.png" alt="" />
                 <img id='font' className='absolute w-[60vw]  left-[0vw] top-[102vh] opacity-[0.05] sar5' src="sary/left.png" alt="" />
+               
+                {/* <div className="mameno"></div>
+
+                <div className='Modale'>
+
+                </div> */}
 
                 <div id='info' className="text-center justify-center items-center mt-10">
                     <p className='text-manga text-[0.9rem] haut'>En iformatique</p>
@@ -160,11 +193,48 @@ function Competence() {
                     <div className="p-1 w-14 mt-2 md:mt-[-0.5rem] justify-center items-center flex rounded ml-[43vw] md:ml-[47.5vw] haut1 bg-manga"></div>
                 </div>
 
-                <div id='comp1' className="absolute w-[100%] lg:w-[70vw] mt-4 lg:ml-[15vw] h-[67vh] grid md:grid-cols-3 grid-cols-2">
+                <div  id='comp0' style={{ boxShadow: '5px 8px 15px #507dfa31',left:"-150%",border:"1px solid #507dfa31"}} className="absolute w-[70vw] ml-[15vw] mt-4 h-[64vh] rounded-[20px] p-11">
+                <Slider {...settings3}>
+                   <div>
+                   <div id='blo' className="flex">
+                        <div>
+                             <h1 id='h1' className=''>01</h1>
+                             <p className='text-white text-[1.7rem] mt-[-0.5rem]'>Full stack Web Projet</p>
+                             <p className='text-gray-600 text-[0.9rem] mt-[-1rem]'>Gestion des réservations du places au sein du CA2E
+                            <br /> Fianarantsoa</p>
+                            <p className='text-manga text-[0.9rem]'>En utilisant React (Frontend) et Symfony (Backend)</p>
+                            <hr />
+                            <FaArrowLeft onClick={fe} className='text-red-600 cursor-pointer vol1' />
+                        </div>
+                        <div className='ml-5'>
+                            <img className='w-[40rem] rounded-[50px] mt-6' src="sary/Capture d’écran (105).png" alt="" />
+                        </div>
+                    </div>
+                   </div>
+                   <div>
+                   <div id='blo' className="flex">
+                        <div>
+                             <h1 id='h1' className=''>02</h1>
+                             <p className='text-white text-[1.7rem] mt-[-0.5rem]'>Exemple du Maquete </p>
+                             <p className='text-gray-600 text-[0.9rem] mt-[-1rem]'>Maquete pour le portofolio et
+                            <br /> quelques maquete mobile</p>
+                            <p className='text-manga text-[0.9rem]'>En utilisant Adobe XD</p>
+                            <hr />
+                            <FaArrowLeft onClick={fe} className='text-red-600 cursor-pointer vol1' />
+                        </div>
+                        <div className='ml-5'>
+                            <img className='w-[40rem] rounded-[50px] mt-6' src="sary/Capture d’écran (125).png" alt="" />
+                        </div>
+                    </div>
+                   </div>
+                </Slider>
+                </div>
+
+                <div style={{left:"1vw"}} id='comp1' className="absolute w-[100%] lg:w-[70vw] mt-4 lg:ml-[15vw] h-[67vh] grid md:grid-cols-3 grid-cols-2">
                         <div id='web' className=" w-[14rem] h-[30vh] p-3 m-3 rounded-[20px] cursor-pointer bas">
                             <div className="flex">
                                 <FaCode className='text-[2.2rem] text-manga'/>
-                                <p id='det' className='ml-14 text-[0.8rem] p-1 px-4 rounded text-manga  border-[1px] border-manga '>Detais</p>
+                                <p id='det' onClick={Voir} className='ml-14 text-[0.8rem] p-1 px-4 rounded text-manga  border-[1px] border-manga '>Voirs</p>
                             </div>
                             <p className='text-white text-[1rem] mt-[0rem]'>Développement Web</p>
                             <p className='text-gray-600 text-[0.9rem] mt-[-0.5rem]'>En utilisant Framework
@@ -174,11 +244,8 @@ function Competence() {
                             </p>
                         </div>
                         <div id='web1' className=" w-[14rem] h-[30vh] p-3 m-3 rounded-[20px] hover:border-[1px] hover:border-manga cursor-pointer bas1">
-                            <div className="flex">
-                                <FaMobile className='text-[2.2rem] text-manga'/>
-                                <p id='det' className='ml-14 text-[0.8rem] p-1 px-4 rounded text-manga  border-[1px] border-manga '>Detais</p>
-                            </div>
-                            <p className='text-white text-[1rem] mt-[0rem]'>Développement Mobile</p>
+                            <FaMobile className='text-[2.2rem] text-manga'/>
+                            <p className='text-white text-[1rem] mt-[0.5rem]'>Développement Mobile</p>
                             <p className='text-gray-600 text-[0.9rem] mt-[-0.5rem]'>En utilisant Framework
                                 Laravel, symfony et NodeJs pour le 
                                 partie Backend. ReactNative
@@ -200,7 +267,7 @@ function Competence() {
                             </p>
                         </div>
                         <div id='web4' className=" w-[14rem] h-[26vh] p-3 m-3 rounded-[20px] hover:border-[1px] hover:border-manga cursor-pointer bas4">
-                           <div className="flex">
+                           <div className="flex" onClick={deta}>
                                 <FaPhotoVideo className='text-[2.2rem] text-manga'/>
                                 <p id='det' className='ml-14 text-[0.8rem] p-1 px-4 rounded text-manga  border-[1px] border-manga '>Detais</p>
                            </div>
@@ -224,7 +291,7 @@ function Competence() {
                             <div id='web' className="w-[85%] h-[30vh] p-5 rounded-[20px] cursor-pointer border-[1px] border-manga">
                                 <div className="flex">
                                     <FaCode className='text-[2.2rem] text-manga'/>
-                                    <p id='det' className='ml-14 text-[0.8rem] p-1 px-4 rounded text-manga  border-[1px] border-manga '>Detais</p>
+                                    <p id='det' className='ml-14 text-[0.8rem] p-1 px-4 rounded text-manga  border-[1px] border-manga '></p>
                                 </div>
                                 <p className='text-white text-[1rem] mt-[0rem]'>Développement Web</p>
                                 <p className='text-gray-600 text-[0.9rem] mt-[-0.5rem]'>En utilisant Framework
@@ -234,11 +301,8 @@ function Competence() {
                                 </p>
                             </div>
                             <div id='web1' className=" w-[85%] h-[30vh] p-5 rounded-[20px] border-[1px] border-manga cursor-pointer">
-                            <div className="flex">
-                                <FaMobile className='text-[2.2rem] text-manga'/>
-                                <p id='det' className='ml-14 text-[0.8rem] p-1 px-4 rounded text-manga  border-[1px] border-manga '>Detais</p>
-                            </div>
-                            <p className='text-white text-[1rem] mt-[0rem]'>Développement Mobile</p>
+                            <FaMobile className='text-[2.2rem] text-manga'/>
+                            <p className='text-white text-[1rem] mt-[0.5rem]'>Développement Mobile</p>
                             <p className='text-gray-600 text-[0.9rem] mt-[-0.5rem]'>En utilisant Framework
                                 Laravel, symfony et NodeJs pour le 
                                 partie Backend. ReactNative
@@ -264,9 +328,9 @@ function Competence() {
                             </p>
                         </div>
                         <div id='web4' className="w-[85%] h-[30vh] p-5 rounded-[20px] border-[1px] border-manga cursor-pointer">
-                           <div className="flex">
+                           <div className="flex" >
                                 <FaPhotoVideo className='text-[2.2rem] text-manga'/>
-                                <p id='det' className='ml-14 text-[0.8rem] p-1 px-4 rounded text-manga  border-[1px] border-manga '>Detais</p>
+                                <p id='det' className='ml-14 text-[0.8rem] p-1 px-4 rounded text-manga  border-[1px] border-manga '></p>
                            </div>
                             <p className='text-white text-[1rem] mt-[0.5rem]'>Désigneur</p>
                             <p className='text-gray-600 text-[0.9rem] mt-[0.5rem]'>En utilisant Adobe XD,

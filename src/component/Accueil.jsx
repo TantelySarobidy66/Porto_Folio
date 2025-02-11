@@ -169,18 +169,18 @@ function Accueil() {
               </div>
             </div>
             <div className='icon flex mt-4'>
-              <div className='flex align-items-center justify-center shadow-manga shadow-2xl w-10 h-10 rounded-full cursor-pointer bas'>
+              <a href='https://www.facebook.com/felix.brayannsrbd' className='flex align-items-center justify-center shadow-manga shadow-2xl w-10 h-10 rounded-full cursor-pointer bas'>
                 <FaFacebook size={20} className='text-manga' />
-              </div>
-              <div className='flex align-items-center justify-center shadow-manga shadow-2xl w-10 h-10 rounded-full ml-4 cursor-pointer bas1'>
+              </a>
+              <a className='flex align-items-center justify-center shadow-manga shadow-2xl w-10 h-10 rounded-full ml-4 cursor-pointer bas1'>
                 <FaGithub size={20} className='text-manga' />
-              </div>
-              <div className='flex align-items-center justify-center shadow-manga shadow-2xl w-10 h-10 rounded-full ml-4 cursor-pointer bas2'>
+              </a>
+              <a className='flex align-items-center justify-center shadow-manga shadow-2xl w-10 h-10 rounded-full ml-4 cursor-pointer bas2'>
                 <FaLinkedin size={20} className='text-manga' />
-              </div>
-              <div className='flex align-items-center justify-center shadow-manga shadow-2xl w-10 h-10 rounded-full ml-4 cursor-pointer bas3'>
+              </a>
+              <a className='flex align-items-center justify-center shadow-manga shadow-2xl w-10 h-10 rounded-full ml-4 cursor-pointer bas3'>
                 <FaWhatsapp size={20} className='text-manga' />
-              </div>
+              </a>
             </div>
 
             <div id='chifre' className="bas1 mt-3">

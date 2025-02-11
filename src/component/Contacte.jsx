@@ -11,6 +11,7 @@ import ScrollReveal from 'scrollreveal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationArrow, faMessage, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { toast } from 'react-toastify';
+import axios from 'axios';
 
 function Contacte() {
 
@@ -145,16 +146,14 @@ function Contacte() {
     function bout(e)
     {
         e.preventDefault();
-        const d1 = document.getElementById('champ').value;
-        const d2 = document.getElementById('champ1').value;
-        if(d1 != "" && d2 != ""){
+        const email = document.getElementById('champ').value;
+        const message = document.getElementById('champ1').value;
+        axios.post('http://localhost:8081/mail', { email, message})
+        .then(res => {
+            console.log(res.data);
             toast.success("Message envoyer avec succés")
-        }
-        else{
-            toast.error("Remplir tous les champs")
-        }
+        }).catch(er => console.log(er));
     }
-
 
     return (
         <>
@@ -208,9 +207,9 @@ function Contacte() {
                         <p className='text-manga text-[0.9rem] haut mt-4'>Veuillez remplir tous les champs <br /> <span className='text-white'> Si vous avez des questions</span></p>
                         <form action="" onSubmit={bout}>
                             <div id='inp'>
-                                <input id='champ' onChange={inpu} required style={{ backgroundColor: "#000206", width: "80%", color:"#fff",borderBottom: "2px solid #507CFA", borderTop: "1px solid transparent", borderLeft: "1px solid transparent", borderRight: "1px solid transparent", fontSize: "0.9rem" }} placeholder='Tapez ici votre email' className='form-control btn-sm placeholder-gray-400' type="email" /> <br />
+                                <input id='champ' onChange={inpu} required style={{ backgroundColor: "transparent", width: "80%", color:"#fff",borderBottom: "2px solid #507CFA", fontSize: "0.9rem" }} placeholder='Tapez ici votre email' className='form-control btn-sm placeholder-gray-400' type="email" /> <br />
                                 <p id='er' style={{display:"none"}} className='text-[0.9rem] text-red-600'>Email incorrect</p>
-                                <textarea id='champ1' required name="" style={{ backgroundColor: "#000206", width: "80%", borderBottom: "2px solid #507CFA", borderTop: "1px solid transparent", borderLeft: "1px solid transparent", borderRight: "1px solid transparent", fontSize: "0.9rem", color: "#fff", height: 100 }} placeholder='Tapez ici votre question' className='form-control btn-sm' ></textarea>
+                                <textarea id='champ1' required name="" style={{ backgroundColor: "transparent", width: "80%", borderBottom: "2px solid #507CFA", fontSize: "0.9rem", color: "#fff", height: 100 }} placeholder='Tapez ici votre question' className='form-control btn-sm' ></textarea>
                             </div>
                             <button id='btns' type='submit' style={{ backgroundColor: "#507CFA", color: "#fff" }} className='btn btn-sm mt-7 px-4'><FontAwesomeIcon icon={faLocationArrow} /> Envoyer</button>
                         </form>
