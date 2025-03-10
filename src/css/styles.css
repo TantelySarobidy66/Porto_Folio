@@ -15,6 +15,7 @@
 :root {
     --mainty: #000000;
     --manga: #507CFA;
+    --manga2: #507dfa48;
     --mena: #f84c31;
 }
 
@@ -23,328 +24,63 @@ body {
     overflow-x: hidden;
 }
 
-.bars{
-    display: none;
+#text {
+    color: transparent;
+    -webkit-text-stroke: 0.5px var(--manga);
+    -webkit-background-clip: text;
+    background-position: 0 20px;
 }
 
-.bos1{
-    width: 35vw;
-}
-
-.ambony{
-    position: fixed;
-    width: 100%;
-    height: 4.5rem;
-    display: none;
-    z-index: 4;
-    backdrop-filter: blur(7px);
-}
-
-.lienRes{
-    position: fixed;
-    top: 9vh;
-    z-index: 4;
-    right: -120%;
-    width: 12rem;
-    height: 15rem;
-    backdrop-filter: blur(7px);
-    border: 1px solid var(--manga);
-    border-radius: 10px;
-    padding: 15px;
-}
-
-.lienRes a{
-    background-color: rgba(0, 110, 255, 0.052);
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-#compet{
-    border: 1px solid var(--mainty);
-    background: linear-gradient(180deg,var(--mainty),var(--mainty));
-}
-
-#det{
-    transform: scale(0);
-}
-
-#web,#web2,#web4{
-    background-color: #000206;
-    border-bottom: 2px solid var(--manga);
-    box-shadow: 5px 8px 15px #507dfa31;
-}
-
-#web1,#web3,#web5{
-    background-color: #000206;
-    border-bottom: 2px solid var(--manga);
-    box-shadow: 5px 8px 15px #507dfa31;
-}
-
-#web:hover,#web1:hover,#web2:hover,#web3:hover,#web4:hover,#web5:hover{
-    background-color: #000000;
-    border: 1px solid var(--manga);
-}
-
-#web:hover #det{
-    transform: scale(1);
-    transition: 0.5s;
-}
-
-#web1:hover #det{
-    transform: scale(1);
-    transition: 0.5s;
-}
-
-#web4:hover #det{
-    transform: scale(1);
-    transition: 0.5s;
-}
-
-#comp2{
-    display: none;
-}
-
-#mondee1,#mondee2,#mondee3{
-    display: none;
-}
-
-#champ,#champ1{
-    color: #fff;
-    border: 0.02px solid var(--manga);
+#text1 {
+    color: transparent;
+    -webkit-text-stroke: 0.5px rgb(100, 100, 100);
+    -webkit-background-clip: text;
+    background-position: 0 20px;
 }
 
 #champ::placeholder{
-    color: #ffffffb0;
+    color: #9c9c9c;
 }
 
-#champ1::placeholder{
-    color: #ffffffb0;
-}
-
-#h1{
-    background: var(--mainty);
-    -webkit-background-clip: text;
-    background-position: 0 20px;
-    color: transparent;
-    font-size: 560%;
-    -webkit-text-stroke: 0.5px var(--manga);
-}
-
-.vol2{
+#mondee2, #mondee3{
     display: none;
 }
-.vol1{
-    display: block;
-}
 
-@media (max-width:850px){
-    #champ2{
-        display: none;
+@media (max-width:1200px){
+    #isa{
+        margin-top: 2vh;
     }
 }
-
-@media (max-width:830px){
-    #accu{
-        height: 135vh;
-    }
-    .bos1{
-        width: 97%;
-    }
-    #soratra{
-        top: 65vh;
-        text-align: center;
-        padding: 5px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
-    }
-    #lien{
-        display: none;
-    }
-    #li{
-        left: 60vw;
-    }
-    #sare{
-        left: 20vw;
-    }
-    #chifre{
-       left: 2vw;
-       top: 130vh;
-    }
-    .count{
-        font-size: 2vw;
-    }
-    .bars{
-        display: block;
-        cursor: pointer;
-    }    
-    .tele{
-        display: none;
-    }
-    .ambony{
-        display: block;
-    }
-    #logo, #bars{
-        position: fixed;
-        z-index: 5;
-    }
-}
-
 
 @media (max-width:640px){
-    .ambony{
-        display: block;
-    }
-    #accu{
-        height: auto;
+    #soratra{
+        margin-top: 12vh;
+        text-align: center;
     }
     .tele{
+        justify-content: center;
+        display: flex;
+    }
+    #isa{
+        margin-top: 2vh;
+    }
+    #conta{
+        margin-top: 6vh;
+        text-align: center;
+    }
+    #lie{
         display: none;
     }
-    #logo, #bars{
-        position: fixed;
-        z-index: 5;
-    }
-    .bars{
-        margin-left: 40vw;
-        width: 10%;
-    }  
     .icon{
         justify-content: center;
-        align-items: center;
     }
-    #li{
-        position: relative;
-        left: 60vw;
+    #btnFarany{
+        margin-top: 10%;
     }
-    #sare{
-        position: relative;
-        left: 4vw;
-        top: 10vh;
-    }
-    #soratra{
-        position: relative;
-        top: 0vh;
-        margin-top: 10vh;
-        left: 4vw;
-        width: 95%;
-    }
-    #soratra .bos{
-        font-size: 2.3rem;
-    }
-    #li{
-        left: 40vw;
-    }
-    #chifre{
-        left: 0vw;
-        top: 110vh;
-     }
-    #isa{
-        display: gred;
-        color: rgb(84, 100, 114);
-        margin-left: -2vw;
-        margin-top: 1rem;
-        width: 100%;
-        justify-items: center;
-    }
-    #isa .ppp{
-       font-size: 2rem;
-    }
-    #isa .pp{
-        margin-left: -8vw;
-    }
-
-    /* competence */
-    #compet{
-        width: 99%;
-    }
-    #comp1{
-        display: none;
-    }
-    #comp2{
-        display: block;
-    }
-    #info{
-        margin-top: 8vh;
-    }
-    .slick-slide > div{
-        margin: 0 10px;
-    }
-    #font{
-        top: 140vh;
-        opacity: 0.1;
-        width: 80rem;
-    }
-    #trace{
-        width: 15rem;
-        left: 0;
-        top: 0;
-    }
-    #arraw{
-        display: none;
-    }
-
-    /* a propos */
-    #prop{
-        margin-top: 1vh;
-        width: 82vw;
-    }
-    #propos{
-        height: 110vh;
-    }
-
-
-    /* contacte */
-    #barAmbany{
-        display: none;
-    }
-   
-    #cont{
-        margin-left: 4vw;
-        margin-top: 6vh;
-    }
-    #texta{
-        text-align: center;
-    }
-    #form{
-        text-align: center;
-        justify-content: center;
-    }
-
-    #inp{
-        margin-left: 12vw;
-    }
-
     #btns{
-        width: 72%;
-        margin-left: -4vw;
+        margin-left: -5vw;
     }
-    #mondee{
-        width: 100%;
-        left: 0;
-    }
-    #mondee1{
+    #mondee2, #mondee3{
         display: block;
-        width: 100%;
-        left: 0;
-        top: 352vh;
-    }
-    #mondee2{
-        display: block;
-        width: 100%;
-        left: 0;
-        top: 382vh;
-    }
-    #mondee3{
-        display: block;
-        width: 100%;
-        left: 0;
-        top: 412vh;
-    }
-
-    #blo{
-        display: block;
-    }
-
-    #comp0{
-        display: none;
     }
 }

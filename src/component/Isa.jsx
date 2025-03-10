@@ -7,7 +7,7 @@ function Isa() {
 
  const chifre = [
     {
-        num: 3,
+        num: 4,
         text: "Ans d'expériences",
     },
     {
@@ -17,10 +17,6 @@ function Isa() {
     {
         num: 6,
         text: "Technologie maitrisée",
-    },
-    {
-        num: +8,
-        text: "Maquette terminée",
     },
  ]
 
@@ -33,17 +29,17 @@ function Isa() {
   return (
     <>
         <div className="container mx-auto">
-            <div id='isa' className='grid grid-cols-2 sm:grid-cols-4'>
+            <div id='isa' className='grid grid-cols-2 md:grid-cols-5'>
                 {chifre.map((i,list) => {
                     return (
-                        <div key={list} className='ml-[4vw] flex'>
+                        <div key={list} className='flex'>
                             <CountUp 
                               end={i.num}
-                              duration={20}
-                              delay={5}
-                              className='text-[5vw] text-white ppp'
+                              duration={15}
+                              delay={3}
+                              className='text-[2.5rem] sm:text-[3.8rem] text-white ppp'
                             />
-                            <p className='mt-[5vh] ml-5 w-[80px] pp'>{i.text}</p>
+                            <p className='mt-[1vh] text-gray-600 sm:mt-[3vh] ml-5 w-[80px]'>{i.text}</p>
                         </div>
                     );
                 })}
