@@ -13,22 +13,22 @@ function Login() {
 
   const [mety, setMety] = useState(false);
 
-  useEffect(() => {
-    ScrollReveal().reveal(".haute", {
-      duration: 1000,
-      origin: "top",
-      distance: "100px",
-      delay: 600,
-      reset: true,
-    }),
-    ScrollReveal().reveal(".left", {
-      duration: 1000,
-      origin: "left",
-      distance: "100px",
-      delay: 600,
-      reset: true,
-    })
-  }, []);
+  // useEffect(() => {
+  //   ScrollReveal().reveal(".haute", {
+  //     duration: 1000,
+  //     origin: "top",
+  //     distance: "100px",
+  //     delay: 600,
+  //     reset: true,
+  //   }),
+  //   ScrollReveal().reveal(".left", {
+  //     duration: 1000,
+  //     origin: "left",
+  //     distance: "100px",
+  //     delay: 600,
+  //     reset: true,
+  //   })
+  // }, []);
 
   function close() {
     $('.lienRes').animate({ right: "-120%" })

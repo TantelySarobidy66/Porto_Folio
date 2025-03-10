@@ -14,92 +14,92 @@ function Accueil() {
 
   // const [nom, setNom] = useState('');
 
-  useEffect(() => {
-    ScrollReveal().reveal(".gauche", {
-      duration: 700,
-      origin: "left",
-      distance: "10px",
-      delay: 600,
-      reset: true,
-    })
-    ScrollReveal().reveal(".sar", {
-      duration: 5000,
-      origin: "top",
-      distance: "10px",
-      delay: 600,
-      reset: true,
-    })
-    ScrollReveal().reveal(".gauche1", {
-      duration: 3000,
-      origin: "left",
-      distance: "10px",
-      delay: 700,
-      reset: true,
-    })
-    ScrollReveal().reveal(".droite", {
-      duration: 1000,
-      origin: "right",
-      distance: "10px",
-      delay: 700,
-      reset: true,
-    })
-    ScrollReveal().reveal(".droite1", {
-      duration: 3000,
-      origin: "right",
-      distance: "10px",
-      delay: 700,
-      reset: true,
-    })
-    ScrollReveal().reveal(".droite2", {
-      duration: 3200,
-      origin: "right",
-      distance: "5px",
-      delay: 700,
-      reset: true,
-    })
-    ScrollReveal().reveal(".haut", {
-      duration: 3000,
-      origin: "top",
-      distance: "10px",
-      delay: 700,
-      reset: true,
-    })
-    ScrollReveal().reveal(".haut1", {
-      duration: 3200,
-      origin: "top",
-      distance: "10px",
-      delay: 700,
-      reset: true,
-    })
-    ScrollReveal().reveal(".bas", {
-      duration: 1000,
-      origin: "bottom",
-      distance: "50px",
-      delay: 700,
-      reset: true,
-    })
-    ScrollReveal().reveal(".bas1", {
-      duration: 1800,
-      origin: "bottom",
-      distance: "80px",
-      delay: 700,
-      reset: true,
-    })
-    ScrollReveal().reveal(".bas2", {
-      duration: 2500,
-      origin: "bottom",
-      distance: "120px",
-      delay: 700,
-      reset: true,
-    })
-    ScrollReveal().reveal(".bas3", {
-      duration: 3000,
-      origin: "bottom",
-      distance: "150px",
-      delay: 700,
-      reset: true,
-    })
-  }, []);
+  // useEffect(() => {
+  //   ScrollReveal().reveal(".gauche", {
+  //     duration: 700,
+  //     origin: "left",
+  //     distance: "10px",
+  //     delay: 600,
+  //     reset: true,
+  //   })
+  //   ScrollReveal().reveal(".sar", {
+  //     duration: 5000,
+  //     origin: "top",
+  //     distance: "10px",
+  //     delay: 600,
+  //     reset: true,
+  //   })
+  //   ScrollReveal().reveal(".gauche1", {
+  //     duration: 3000,
+  //     origin: "left",
+  //     distance: "10px",
+  //     delay: 700,
+  //     reset: true,
+  //   })
+  //   ScrollReveal().reveal(".droite", {
+  //     duration: 1000,
+  //     origin: "right",
+  //     distance: "10px",
+  //     delay: 700,
+  //     reset: true,
+  //   })
+  //   ScrollReveal().reveal(".droite1", {
+  //     duration: 3000,
+  //     origin: "right",
+  //     distance: "10px",
+  //     delay: 700,
+  //     reset: true,
+  //   })
+  //   ScrollReveal().reveal(".droite2", {
+  //     duration: 3200,
+  //     origin: "right",
+  //     distance: "5px",
+  //     delay: 700,
+  //     reset: true,
+  //   })
+  //   ScrollReveal().reveal(".haut", {
+  //     duration: 3000,
+  //     origin: "top",
+  //     distance: "10px",
+  //     delay: 700,
+  //     reset: true,
+  //   })
+  //   ScrollReveal().reveal(".haut1", {
+  //     duration: 3200,
+  //     origin: "top",
+  //     distance: "10px",
+  //     delay: 700,
+  //     reset: true,
+  //   })
+  //   ScrollReveal().reveal(".bas", {
+  //     duration: 1000,
+  //     origin: "bottom",
+  //     distance: "50px",
+  //     delay: 700,
+  //     reset: true,
+  //   })
+  //   ScrollReveal().reveal(".bas1", {
+  //     duration: 1800,
+  //     origin: "bottom",
+  //     distance: "80px",
+  //     delay: 700,
+  //     reset: true,
+  //   })
+  //   ScrollReveal().reveal(".bas2", {
+  //     duration: 2500,
+  //     origin: "bottom",
+  //     distance: "120px",
+  //     delay: 700,
+  //     reset: true,
+  //   })
+  //   ScrollReveal().reveal(".bas3", {
+  //     duration: 3000,
+  //     origin: "bottom",
+  //     distance: "150px",
+  //     delay: 700,
+  //     reset: true,
+  //   })
+  // }, []);
 
   function menu() {
     $('.lienRes').animate({ right: "5vw" })
