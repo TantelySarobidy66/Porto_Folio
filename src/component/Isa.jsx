@@ -39,7 +39,7 @@ function Isa() {
                               delay={3}
                               className='text-[2.5rem] sm:text-[3.8rem] text-white ppp'
                             />
-                            <p className='mt-[1vh] text-gray-600 sm:mt-[3vh] ml-5 w-[80px]'>{i.text}</p>
+                            <p className='mt-[1vh] text-gray-500 sm:mt-[3vh] ml-5 w-[80px]'>{i.text}</p>
                         </div>
                     );
                 })}

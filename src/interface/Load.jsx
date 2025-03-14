@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import '../css/styles.css'
 // import Slider from "react-slick"
-import { MoonLoader } from 'react-spinners'
+import { BarLoader } from 'react-spinners'
 import { useNavigate } from 'react-router-dom';
 
 function Load() {
@@ -16,8 +16,13 @@ function Load() {
 
   return (
     <>
-      <div className='flex items-center justify-center mt-[45vh]'>
-        <MoonLoader size={50} color='#507CFA' />
+      <div className='flex items-center justify-center mt-[40vh]'>
+        <div>
+        <div>
+          <img src="Group 2429.png" alt="" />
+        </div>
+        <BarLoader size={50} className='mt-3' color='#9610b8b9' />
+        </div>
       </div>
     </>
   );

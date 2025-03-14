@@ -13,22 +13,22 @@ function Login() {
 
   const [mety, setMety] = useState(false);
 
-  // useEffect(() => {
-  //   ScrollReveal().reveal(".haute", {
-  //     duration: 1000,
-  //     origin: "top",
-  //     distance: "100px",
-  //     delay: 600,
-  //     reset: true,
-  //   }),
-  //   ScrollReveal().reveal(".left", {
-  //     duration: 1000,
-  //     origin: "left",
-  //     distance: "100px",
-  //     delay: 600,
-  //     reset: true,
-  //   })
-  // }, []);
+  useEffect(() => {
+    ScrollReveal().reveal(".haute", {
+      duration: 100,
+      origin: "top",
+      distance: "100px",
+      delay: 600,
+      reset: true,
+    }),
+    ScrollReveal().reveal(".left", {
+      duration: 100,
+      origin: "left",
+      distance: "100px",
+      delay: 600,
+      reset: true,
+    })
+  }, []);
 
   function close() {
     $('.lienRes').animate({ right: "-120%" })
@@ -90,29 +90,29 @@ function Login() {
 
       <div className=''>
 
-        <div style={{ backdropFilter: "blur(5px)"}} className='w-full z-40 fixed top-0 left-0 px-[8vw] flex justify-between py-1'>
+        <div style={{ backdropFilter: "blur(5px)",borderBottom:"1px solid #9610b82b"}} className='w-full z-40 fixed top-0 left-0 px-[8vw] flex justify-between py-1'>
           <div className="flex justify-center items-center">
-            <div className="flex justify-center text-center items-center bg-manga w-10 h-10 rounded">
-              <p className='text-white mt-3 text-[1.4rem] '>P</p>
+            <div className="flex justify-center text-center items-center w-14 h-10 rounded gradien">
+              <p className='text-[#fff] mt-3 text-[1.4rem] '>P</p>
             </div>
             <div className='flex px-4 justify-center items-center'>
-              <p className='text-manga mt-3 text-[1.4rem]'>Folio</p>
+              <p className='text-[#fff] mt-3 text-[1.4rem]'>Folio</p>
             </div>
           </div>
           <div className='flex justify-center items-center'>
             <div className="hidden justify-center items-center text-[1rem] lg:flex">
               <div id='round' className='absolute p-1 rounded-full ml-[-23.7rem] mt-8 bg-slate-50'></div>
-              <a href='#accu' onClick={accu} className='text-[#fff] cursor-pointer text-decoration-none px-6'>Accueil</a><br /><br />
-              <a href='#compet' onClick={compet} className=' text-gray-400 cursor-pointer text-decoration-none px-6 hover:text-manga '>Compétences</a><br /><br />
-              <a href='#propos' onClick={propos} className=' text-gray-400 cursor-pointer hover:text-manga px-6 text-decoration-none'>A propos</a><br /><br />
-              <a href='#contact' onClick={contact} className=' text-gray-400 cursor-pointer hover:text-manga px-6 text-decoration-none'>Contactes</a><br />
+              <a href='#accu' onClick={accu} className='text-[#fff] te cursor-pointer text-decoration-none px-6'>Accueil</a><br /><br />
+              <a href='#compet' onClick={compet} className=' text-gray-400 cursor-pointer text-decoration-none px-6 te '>Compétences</a><br /><br />
+              <a href='#propos' onClick={propos} className=' text-gray-400 cursor-pointer te px-6 text-decoration-none'>A propos</a><br /><br />
+              <a href='#contact' onClick={contact} className=' text-gray-400 cursor-pointer te px-6 text-decoration-none'>Contactes</a><br />
             </div>
             <div>
-              <FontAwesomeIcon icon={faSearch} className='ml-[-10vw] text-[1.2rem]  text-[#fff] cursor-pointer sm:text-manga sm:ml-4 ' />
+              <FontAwesomeIcon icon={faSearch} className='ml-[-10vw] text-[1.2rem]  text-[#fff] cursor-pointer sm:gradien sm:ml-4 ' />
             </div>
             <div onClick={Cv1} className=' cursor-pointer hidden px-5 sm:block'>
               <div className='bg-white ml-3 rounded w-[9rem] h-[2rem]'></div>
-              <div style={{ boxShadow: "2px 5px 10px #507dfa48" }} className='bg-manga mt-[-4vh] text-[1rem]  w-[10.5rem] text-white items-center flex shadow-2xl rounded h-[2rem] justify-center'>
+              <div style={{ boxShadow: "2px 5px 10px #507dfa48" }} className='gradien mt-[-4vh] text-[1rem]  w-[10.5rem] text-white items-center flex shadow-2xl rounded h-[2rem] justify-center'>
                 <FontAwesomeIcon icon={faDownload} />&nbsp; Telecharger CV
               </div>
             </div>
@@ -126,15 +126,15 @@ function Login() {
           </div>
         </div>
 
-        <div id='slidemenu' style={{backdropFilter:"blur(5px)", boxShadow:"-0px -0px 10px #507CFA"}} className='top-[11vh] fixed right-[110%] z-40 w-[15rem] h-auto p-4 rounded text-center lg:hidden'>
+        <div id='slidemenu' style={{backdropFilter:"blur(5px)", borderBottom:"1px solid #9610b82b",boxShadow:"-0px -0px 10px #507CFA"}} className='top-[11vh] fixed right-[110%] z-40 w-[15rem] h-auto p-4 rounded text-center lg:hidden'>
           <a href='#accu' onClick={ac} className='text-[#fff] cursor-pointer text-decoration-none px-6'>Accueil</a><br /><br />
-          <a href='#compet' onClick={ac1} className=' text-gray-400 cursor-pointer text-decoration-none px-6 hover:text-manga '>Compétences</a><br /><br />
-          <a href='#propos' onClick={ac2} className=' text-gray-400 cursor-pointer hover:text-manga px-6 text-decoration-none'>A propos</a><br /><br />
-          <a href='#contact' onClick={ac3} className=' text-gray-400 cursor-pointer hover:text-manga px-6 text-decoration-none'>Contactes</a><br />
+          <a href='#compet' onClick={ac1} className=' text-gray-400 cursor-pointer text-decoration-none px-6 te '>Compétences</a><br /><br />
+          <a href='#propos' onClick={ac2} className=' text-gray-400 cursor-pointer te px-6 text-decoration-none'>A propos</a><br /><br />
+          <a href='#contact' onClick={ac3} className=' text-gray-400 cursor-pointer te px-6 text-decoration-none'>Contactes</a><br />
           <div className="flex justify-center items-center">
           <div onClick={Cv1} className=' cursor-pointer mt-3'>
               <div className='bg-white ml-3 rounded w-[9rem] h-[2rem]'></div>
-              <div style={{ boxShadow: "2px 5px 10px #507dfa48" }} className='bg-manga mt-[-4vh] text-[0.9rem]  w-[10.5rem] text-white items-center flex shadow-2xl rounded h-[2rem] justify-center'>
+              <div style={{ boxShadow: "2px 5px 10px #507dfa48" }} className='gradien mt-[-4vh] text-[0.9rem]  w-[10.5rem] text-white items-center flex shadow-2xl rounded h-[2rem] justify-center'>
                 <FontAwesomeIcon icon={faDownload} />&nbsp; Telecharger CV
               </div>
             </div>

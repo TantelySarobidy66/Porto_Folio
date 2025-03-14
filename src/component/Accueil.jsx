@@ -14,92 +14,92 @@ function Accueil() {
 
   // const [nom, setNom] = useState('');
 
-  // useEffect(() => {
-  //   ScrollReveal().reveal(".gauche", {
-  //     duration: 700,
-  //     origin: "left",
-  //     distance: "10px",
-  //     delay: 600,
-  //     reset: true,
-  //   })
-  //   ScrollReveal().reveal(".sar", {
-  //     duration: 5000,
-  //     origin: "top",
-  //     distance: "10px",
-  //     delay: 600,
-  //     reset: true,
-  //   })
-  //   ScrollReveal().reveal(".gauche1", {
-  //     duration: 3000,
-  //     origin: "left",
-  //     distance: "10px",
-  //     delay: 700,
-  //     reset: true,
-  //   })
-  //   ScrollReveal().reveal(".droite", {
-  //     duration: 1000,
-  //     origin: "right",
-  //     distance: "10px",
-  //     delay: 700,
-  //     reset: true,
-  //   })
-  //   ScrollReveal().reveal(".droite1", {
-  //     duration: 3000,
-  //     origin: "right",
-  //     distance: "10px",
-  //     delay: 700,
-  //     reset: true,
-  //   })
-  //   ScrollReveal().reveal(".droite2", {
-  //     duration: 3200,
-  //     origin: "right",
-  //     distance: "5px",
-  //     delay: 700,
-  //     reset: true,
-  //   })
-  //   ScrollReveal().reveal(".haut", {
-  //     duration: 3000,
-  //     origin: "top",
-  //     distance: "10px",
-  //     delay: 700,
-  //     reset: true,
-  //   })
-  //   ScrollReveal().reveal(".haut1", {
-  //     duration: 3200,
-  //     origin: "top",
-  //     distance: "10px",
-  //     delay: 700,
-  //     reset: true,
-  //   })
-  //   ScrollReveal().reveal(".bas", {
-  //     duration: 1000,
-  //     origin: "bottom",
-  //     distance: "50px",
-  //     delay: 700,
-  //     reset: true,
-  //   })
-  //   ScrollReveal().reveal(".bas1", {
-  //     duration: 1800,
-  //     origin: "bottom",
-  //     distance: "80px",
-  //     delay: 700,
-  //     reset: true,
-  //   })
-  //   ScrollReveal().reveal(".bas2", {
-  //     duration: 2500,
-  //     origin: "bottom",
-  //     distance: "120px",
-  //     delay: 700,
-  //     reset: true,
-  //   })
-  //   ScrollReveal().reveal(".bas3", {
-  //     duration: 3000,
-  //     origin: "bottom",
-  //     distance: "150px",
-  //     delay: 700,
-  //     reset: true,
-  //   })
-  // }, []);
+  useEffect(() => {
+    ScrollReveal().reveal(".gauche", {
+      duration: 1000,
+      origin: "left",
+      distance: "10px",
+      delay: 600,
+      reset: true,
+    })
+    ScrollReveal().reveal(".sar", {
+      duration: 1000,
+      origin: "top",
+      distance: "10px",
+      delay: 600,
+      reset: true,
+    })
+    ScrollReveal().reveal(".gauche1", {
+      duration: 1000,
+      origin: "left",
+      distance: "10px",
+      delay: 700,
+      reset: true,
+    })
+    ScrollReveal().reveal(".droite", {
+      duration: 1000,
+      origin: "right",
+      distance: "10px",
+      delay: 700,
+      reset: true,
+    })
+    ScrollReveal().reveal(".droite1", {
+      duration: 1000,
+      origin: "right",
+      distance: "10px",
+      delay: 700,
+      reset: true,
+    })
+    ScrollReveal().reveal(".droite2", {
+      duration: 1000,
+      origin: "right",
+      distance: "5px",
+      delay: 700,
+      reset: true,
+    })
+    ScrollReveal().reveal(".haut", {
+      duration: 1000,
+      origin: "top",
+      distance: "10px",
+      delay: 700,
+      reset: true,
+    })
+    ScrollReveal().reveal(".haut1", {
+      duration: 1000,
+      origin: "top",
+      distance: "10px",
+      delay: 700,
+      reset: true,
+    })
+    ScrollReveal().reveal(".bas", {
+      duration: 1000,
+      origin: "bottom",
+      distance: "50px",
+      delay: 700,
+      reset: true,
+    })
+    ScrollReveal().reveal(".bas1", {
+      duration: 1000,
+      origin: "bottom",
+      distance: "80px",
+      delay: 700,
+      reset: true,
+    })
+    ScrollReveal().reveal(".bas2", {
+      duration: 1000,
+      origin: "bottom",
+      distance: "120px",
+      delay: 700,
+      reset: true,
+    })
+    ScrollReveal().reveal(".bas3", {
+      duration: 1000,
+      origin: "bottom",
+      distance: "150px",
+      delay: 700,
+      reset: true,
+    })
+  }, []);
 
   function menu() {
     $('.lienRes').animate({ right: "5vw" })
@@ -133,12 +133,12 @@ function Accueil() {
       <img className='absolute w-[8vw] left-[87vw] top-[90vh] bas3' src="sary/Ellipse 119.png" alt="" />
       <img className='absolute w-[8vw] left-[5vw] top-[95vh] sar' src="sary-px-4/Ellipse 119.png" alt="" />
 
-      <div className="w-full h-auto grid grid-cols-12 gap-x-[7vw]">
+      <div className="w-full h-auto grid grid-cols-12 gap-x-[7vw] sm:gap-x-[6vw]">
 
         <div id="soratra" className="col-span-12 md:col-span-6 mt-[24vh]">
           <p id='text' className='text-[2rem] md:text-[2.8rem] gauche1'>F I F A L I A N T S O A</p>
-          <p className='text-manga mt-[-4vh] text-[2.7rem] gauche1'>Sarobidy</p>
-          <p className='text-gray-600 text-[0.9rem] gauche1'>Développeur fullsatck spécialisé en Web, Mobile et Desktop,
+          <p id='text' className='mt-[-4vh] text-[2.7rem] gauche1'>Sarobidy</p>
+          <p className='text-gray-500 text-[0.9rem] gauche1'>Développeur fullsatck spécialisé en Web, Mobile et Desktop,
             je conçois des solutions performantes et adaptées aux besoins,
             passionné par design UX/UI, j'allie esthétique et fonctionnalité
             pour une expérience utilisateur optimale. Innovateur et créatif , j'
@@ -146,7 +146,7 @@ function Accueil() {
           <div className="tele relative bas2">
             <div onClick={Cv} className='cursor-pointer mt-6'>
               <div className='bg-white ml-3 rounded w-[9rem] h-[2rem]'></div>
-              <div className='bg-manga mt-[-4vh] text-[0.9rem]  w-[10.5rem] px-4 text-white items-center flex shadow-2xl shadow-manga rounded h-[2rem] justify-center'>
+              <div className='gradien mt-[-4vh] text-[0.9rem]  w-[10.5rem] px-4 text-white items-center flex shadow-2xl shadow-manga rounded h-[2rem] justify-center'>
                 <FontAwesomeIcon icon={faDownload} /> &nbsp; Telecharger CV
               </div>
             </div>
@@ -167,8 +167,8 @@ function Accueil() {
           </div>
         </div>
 
-        <div className="col-span-12 flex justify-center sm:mt-[12vh] sm:col-span-6 droite1">
-          <img src="sary/Groupe 26.png" className='w-[20rem] sm:w-[27rem]' alt="" />
+        <div className="col-span-12 flex justify-center sm:mt-[17vh] sm:col-span-6 droite1">
+          <img src="sary/Groupe 26.png" className='w-[20rem] sm:w-[25rem]' alt="" />
         </div>
 
       </div>
